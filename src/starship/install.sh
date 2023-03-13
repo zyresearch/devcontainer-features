@@ -42,7 +42,7 @@ if [ "${USERNAME}" = "automatic" ]; then
         fi
     done
     if [ "${USERNAME}" = "" ]; then
-        USERNAME=vscode
+        USERNAME=root
     fi
 elif [ "${USERNAME}" = "none" ]; then
     USERNAME=root
