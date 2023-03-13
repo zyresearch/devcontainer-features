@@ -1,0 +1,28 @@
+{
+    "name": "Starship Prompt",
+    "id": "starship",
+    "version": "0.0.1",
+    "description": "Starship: The minimal, blazing-fast, and infinitely customizable prompt for any shell!",
+    "options": {
+        "useNerdFontSymbols": {
+            "type": "boolean",
+            "default": true,
+            "description": "Use nerd-font-symbols preset?"
+        },
+        "username": {
+            "type": "string",
+            "default": "automatic",
+            "proposals": [
+                "devcontainer",
+                "vscode",
+                "codespace",
+                "none",
+                "automatic"
+            ],
+            "description": "Name of a non-root user or none for root"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}

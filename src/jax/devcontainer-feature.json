@@ -1,0 +1,44 @@
+{
+    "name": "JAX: Autograd and XLA",
+    "id": "jax",
+    "version": "0.0.1",
+    "description": "Install JAX and its neural network libraries.",
+    "documentationURL": "https://github.com/mazhengcn/devcontainer-features/tree/main/src/jax",
+    "options": {
+        "jaxVersion": {
+            "type": "string",
+            "enum": [
+                "latest"
+            ],
+            "default": "latest",
+            "description": "Version of JAX to install"
+        },
+        "jaxlibVersion": {
+            "type": "string",
+            "enum": [
+                "latest"
+            ],
+            "default": "latest",
+            "description": "Version of JAX lib to install"
+        },
+        "jaxlibBackend": {
+            "type": "string",
+            "enum": [
+                "cuda",
+                "tpu",
+                "cpu"
+            ],
+            "default": "cpu",
+            "description": "Backend for jaxlib"
+        },
+        "installNNLibs": {
+            "type": "boolean",
+            "default": true,
+            "description": "Whether to install neural network libraries"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/python",
+        "ghcr.io/devcontainers/features/nvidia-cuda"
+    ]
+}
