@@ -1,15 +1,13 @@
 
-# My Favorite Color (color)
+# JAX: Autograd and XLA (jax)
 
-A feature to remind you of your favorite color
+Install JAX and its neural network libraries.
 
 ## Example Usage
 
 ```json
 "features": {
-    "ghcr.io/devcontainers/feature-starter/color:1": {
-        "version": "latest"
-    }
+    "ghcr.io/mazhengcn/devcontainer-features/jax:0": {}
 }
 ```
 
@@ -17,10 +15,13 @@ A feature to remind you of your favorite color
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| favorite | Choose your favorite color. | string | red |
+| jaxVersion | Version of JAX to install | string | latest |
+| jaxlibVersion | Version of JAX lib to install | string | latest |
+| jaxlibBackend | Backend for jaxlib | string | cpu |
+| installNNLibs | Whether to install neural network libraries | boolean | true |
 
 
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/devcontainers/feature-starter/blob/main/src/color/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/mazhengcn/devcontainer-features/blob/main/src/jax/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
