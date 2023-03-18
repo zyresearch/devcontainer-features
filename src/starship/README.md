@@ -7,7 +7,7 @@ Starship: The minimal, blazing-fast, and infinitely customizable prompt for any 
 
 ```json
 "features": {
-    "ghcr.io/mazhengcn/devcontainer-features/starship:0": {}
+    "ghcr.io/mazhengcn/devcontainer-features/starship:1": {}
 }
 ```
 
