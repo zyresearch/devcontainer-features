@@ -1,7 +1,7 @@
 {
     "name": "JAX: Autograd and XLA",
     "id": "jax",
-    "version": "0.0.1",
+    "version": "1.0.1",
     "description": "Install JAX and its neural network libraries.",
     "documentationURL": "https://github.com/mazhengcn/devcontainer-features/tree/main/src/jax",
     "options": {
