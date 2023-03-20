@@ -6,7 +6,7 @@
     "options": {
         "useNerdFontSymbols": {
             "type": "boolean",
-            "default": true,
+            "default": false,
             "description": "Use nerd-font-symbols preset?"
         },
         "username": {
