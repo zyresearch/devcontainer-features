@@ -1,7 +1,7 @@
 {
     "name": "Starship Prompt",
     "id": "starship",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Starship: The minimal, blazing-fast, and infinitely customizable prompt for any shell!",
     "options": {
         "useNerdFontSymbols": {
