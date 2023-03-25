@@ -15,7 +15,7 @@ Starship: The minimal, blazing-fast, and infinitely customizable prompt for any 
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| useNerdFontSymbols | Use nerd-font-symbols preset? | boolean | true |
+| useNerdFontSymbols | Use nerd-font-symbols preset? | boolean | false |
 | username | Name of a non-root user or none for root | string | automatic |
 
 
