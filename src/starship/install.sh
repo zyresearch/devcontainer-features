@@ -2,6 +2,7 @@
 
 USE_NERD_FONT_SYMBOLS="${USE_NERD_FONT_SYMBOLS:-"true"}"
 USERNAME="${USERNAME:-"automatic"}"
+INSTALL_EXA="${INSALL_EXA:-"true"}"
 
 set -e
 
@@ -15,6 +16,21 @@ apt_get_update()
     echo "Running apt-get update..."
     apt-get update -y
 }
+
+apply_exa_alias()
+{
+    echo 'alias ls="exa --tree --level=2 --icons"' >> "$@"
+    echo 'alias ll="ls -l"' >> "$@"
+    echo 'alias lla="ll -a"' >> "$@"
+}
+
+if [ "${INSTALL_EXA}" = "true" ]; then
+    apt_get_update
+    echo "Installing exa..."
+    apt-get -y install --no-install-recommends exa
+    apt-get clean -y
+    rm -rf /var/lib/apt/lists/*
+fi
 
 # Ensure curl is installed
 if ! type curl > /dev/null 2>&1; then
@@ -50,7 +66,7 @@ elif [ "${USERNAME}" = "none" ]; then
     USER_GID=0
 fi
 
-if [ "${USERNAME}" = "root" ]; then 
+if [ "${USERNAME}" = "root" ]; then
     user_rc_path="/root"
 else
     user_rc_path="/home/${USERNAME}"
@@ -85,8 +101,23 @@ if [ "${RC_SNIPPET_ALREADY_ADDED}" != "true" ]; then
         fi
         chown ${USERNAME}:${USERNAME} "${user_rc_path}/.bashrc"
     fi
-    mkdir -p "${user_rc_path}/.config"
-    starship preset nerd-font-symbols > "${user_rc_path}/.config/starship.toml"
+    if [ "${USE_NERD_FONT_SYMBOLS}" = "true" ]; then
+        mkdir -p "${user_rc_path}/.config"
+        starship preset nerd-font-symbols > "${user_rc_path}/.config/starship.toml"
+    fi
+    if type exa > /dev/null 2>&1; then
+        apply_exa_alias "${user_rc_path}/.bashrc"
+        if type zsh > /dev/null 2>&1; then
+            apply_exa_alias "${user_rc_path}/.zshrc"
+        fi
+        if [ "${USERNAME}" != "root" ]; then
+            apply_exa_alias "/root/.bashrc"
+            if type zsh > /dev/null 2>&1; then
+                apply_exa_alias "/root/.zshrc"
+            fi
+            chown ${USERNAME}:${USERNAME} "${user_rc_path}/.bashrc"
+        fi
+    fi
     RC_SNIPPET_ALREADY_ADDED="true"
 fi
 
