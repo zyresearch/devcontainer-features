@@ -19,7 +19,7 @@ apt_get_update()
 
 apply_exa_alias()
 {
-    echo 'alias ls="exa --tree --level=2 --icons"' >> "$@"
+    echo 'alias ls="exa --icons"' >> "$@"
     echo 'alias ll="ls -l"' >> "$@"
     echo 'alias lla="ll -a"' >> "$@"
 }
