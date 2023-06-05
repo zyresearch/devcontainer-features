@@ -7,7 +7,7 @@ Install JAX and its neural network libraries.
 
 ```json
 "features": {
-    "ghcr.io/mazhengcn/devcontainer-features/jax:1": {}
+    "ghcr.io/zyresearch/devcontainer-features/jax:1": {}
 }
 ```
 
@@ -24,4 +24,4 @@ Install JAX and its neural network libraries.
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/mazhengcn/devcontainer-features/blob/main/src/jax/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/zyresearch/devcontainer-features/blob/main/src/jax/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._

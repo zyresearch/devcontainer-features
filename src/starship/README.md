@@ -7,7 +7,7 @@ Starship: The minimal, blazing-fast, and infinitely customizable prompt for any 
 
 ```json
 "features": {
-    "ghcr.io/mazhengcn/devcontainer-features/starship:1": {}
+    "ghcr.io/zyresearch/devcontainer-features/starship:1": {}
 }
 ```
 
@@ -23,4 +23,4 @@ Starship: The minimal, blazing-fast, and infinitely customizable prompt for any 
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/mazhengcn/devcontainer-features/blob/main/src/starship/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/zyresearch/devcontainer-features/blob/main/src/starship/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
